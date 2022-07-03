@@ -11,7 +11,7 @@ function App() {
       <input type="button" value="remove func" onClick={function(){
         setFuncShow(false);
       }} />
-      <input type="button" value="remove func" onClick={function(){
+      <input type="button" value="remove class" onClick={function(){
         setclassShow(false);
       }} />
       {funcShow ? <FuncComp initNumber={2} /> : null}
@@ -50,7 +50,7 @@ function FuncComp(props){
     document.title = number;
     // clean up
     return function(){
-      console.log('%cfunc => useEffect number componentWillUnMount '+(++funcId), funcStyle);
+      console.log('%cfunc => useEffect number return componentWillUnMount '+(++funcId), funcStyle);
     }
   }, [number]); // 빈 배열을 넣어서 1회만 실행되도록 조절
 
